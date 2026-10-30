@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0b10" />
+  <title>GaliGPT — Next Level Voice AI</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="bg-glow glow-a"></div>
+  <div class="bg-glow glow-b"></div>
+
+  <main class="app">
+    <header class="header">
+      <div>
+        <div class="badge">VOICE AI • V2</div>
+        <h1>Gali<span>GPT</span></h1>
+        <p>Your uncensored-style, non-hateful voice buddy.</p>
+      </div>
+      <div class="header-actions">
+        <div id="aiBadge" class="ai-badge checking">Checking AI…</div>
+        <button id="themeBtn" class="icon-btn" title="Theme">◐</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="voice-stage">
+        <div id="orb" class="orb">
+          <div class="orb-core">G</div>
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+        </div>
+        <div class="voice-copy">
+          <div id="status" class="status">Ready to talk</div>
+          <div id="liveText" class="live-text">Mic dabao aur bol.</div>
+        </div>
+      </div>
+
+      <div class="main-controls">
+        <button id="micBtn" class="primary">🎙 Start Talking</button>
+        <button id="interruptBtn" class="secondary">⚡ Interrupt</button>
+        <button id="muteBtn" class="secondary">🔊 Voice On</button>
+      </div>
+
+      <div class="toggles">
+        <label><input id="autoListen" type="checkbox" checked> Auto-listen after reply</label>
+        <label><input id="shortReplies" type="checkbox" checked> Voice-friendly replies</label>
+      </div>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-head">
+        <div>
+          <strong>Conversation</strong>
+          <span id="turnCount">0 turns</span>
+        </div>
+        <div class="chat-actions">
+          <button id="exportBtn" class="tiny">Export</button>
+          <button id="clearBtn" class="tiny danger">Reset</button>
+        </div>
+      </div>
+
+      <div id="chat" class="chat">
+        <div class="bubble bot">
+          <span class="speaker">GALIGPT</span>
+          <div>Abe hero, bol kya bakchodi discuss karni hai? 🎙️</div>
+        </div>
+      </div>
+
+      <div class="composer">
+        <input id="textInput" autocomplete="off" placeholder="Type bhi kar sakta hai…" />
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <section class="settings-card">
+      <div class="settings-title">
+        <div>
+          <div class="badge">PERSONALITY LAB</div>
+          <h2>How abusive should this idiot be?</h2>
+        </div>
+      </div>
+
+      <div class="grid">
+        <label>
+          Personality
+          <select id="personality">
+            <option value="dost" selected>Desi Dost</option>
+            <option value="sarcastic">Sarcastic</option>
+            <option value="mechanic">Technical Jugaadu</option>
+            <option value="chill">Chill</option>
+            <option value="savage">Savage</option>
+          </select>
+        </label>
+
+        <label>
+          Language
+          <select id="languageMode">
+            <option value="auto" selected>Auto — match my language</option>
+            <option value="hindi">Hindi</option>
+            <option value="english">English</option>
+            <option value="hinglish">Hinglish</option>
+          </select>
+        </label>
+
+        <label>
+          Speech recognition
+          <select id="speechLang">
+            <option value="hi-IN" selected>Hindi / Hinglish India</option>
+            <option value="en-IN">English India</option>
+            <option value="en-US">English US</option>
+          </select>
+        </label>
+
+        <label>
+          Gaali level
+          <select id="roastLevel">
+            <option value="light">Light — oye/gadhe type</option>
+            <option value="medium" selected>Medium — saale/chutiye type</option>
+            <option value="hard">Hard — stronger desi gaali</option>
+            <option value="nuclear">Nuclear — maximum normal profanity</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="bank">
+        <div class="bank-head">
+          <strong>Gaali Bank</strong>
+          <span>Har reply ke start me yahan se ek phrase lagega.</span>
+        </div>
+        <textarea id="customBank" rows="4"></textarea>
+        <div class="bank-actions">
+          <button id="loadDefaultsBtn" class="secondary">Load my default gaalis</button>
+          <button id="saveBankBtn" class="secondary">Save custom bank</button>
+        </div>
+      </div>
+
+      <p class="fineprint">
+        Strong profanity is allowed here as consensual banter. Protected-group slurs, real threats, and hateful abuse are intentionally excluded.
+      </p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
